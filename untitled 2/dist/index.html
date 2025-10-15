@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>XeroGap AI | AI & Automation for Business Growth</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Major+Mono+Display&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --accent: #00FF88;
+  --dark-bg: #051A06;
+  --text-light: #ffffff;
+  --text-muted: #C9CCC9;
+  --text-dark: #111111;
+  --radius: 10px;
+  --shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+* {box-sizing: border-box; margin: 0; padding: 0;}
+body {
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  color: var(--text-dark);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  background: var(--dark-bg);
+  padding: 1.2rem 0;
+  text-align: center;
+}
+.logo {
+  font-family: 'Major Mono Display', monospace;
+  color: var(--accent);
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+/* Success Banner */
+#success-banner {
+  position: fixed;
+  top: -60px;
+  left: 0;
+  right: 0;
+  background: var(--accent);
+  color: #051A06;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: 600;
+  transition: all .5s ease;
+  z-index: 999;
+}
+#success-banner.visible { top: 0; }
+
+/* Hero / Banner */
+#hero {
+  text-align: center;
+  padding: 100px 10%;
+  background: var(--dark-bg);
+  color: var(--text-light);
+}
+#hero h1 {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+#hero p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  color: var(--text-muted);
+}
+.industries span {
+  display: inline-block;
+  margin: 5px 8px;
+  background: #0a2812;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  color: var(--accent);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+.hero-ctas a {
+  margin: 10px;
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--dark-bg);
+  box-shadow: 0 0 0 transparent;
+}
+.btn-primary:hover {
+  box-shadow: 0 0 12px var(--accent);
+  transform: translateY(-2px);
+}
+.btn-outline {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+.btn-outline:hover {
+  background: var(--accent);
+  color: var(--dark-bg);
+  box-shadow: 0 0 12px var(--accent);
+}
+
+/* Services */
+#services {
+  padding: 80px 10%;
+  background: #ffffff;
+}
+#services h2 {
+  text-align: center;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+}
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+.service-card {
+  background: var(--dark-bg);
+  color: var(--text-light);
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.service-card button {
+  align-self: flex-start;
+  margin-top: auto;
+  background: var(--accent);
+  color: var(--dark-bg);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0,255,136,0.25);
+}
+.service-card h3 { margin-bottom: 5px; color: #fff; }
+.service-card h4 { color: var(--accent); margin-bottom: 10px; }
+.service-card p { margin-bottom: 8px; font-size: 0.95rem; color: var(--text-muted); }
+.service-card button {
+  margin-top: 10px;
+  background: var(--accent);
+  color: var(--dark-bg);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.service-card button:hover {
+  box-shadow: 0 0 12px var(--accent);
+  transform: translateY(-2px);
+}
+
+/* About */
+#about {
+  text-align: center;
+  padding: 80px 10%;
+  background: var(--dark-bg);
+}
+#about h2 { color: #fff; margin-bottom: 1rem; }
+#about p { max-width: 800px; margin: 0.8rem auto; color: var(--text-muted); }
+
+/* Booking */
+#booking {
+  background: #ffffff;
+  padding: 80px 10%;
+  text-align: center;
+}
+#booking h2 {
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+}
+.form-container {
+  background: var(--dark-bg);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  color: var(--text-light);
+}
+.form-container label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+}
+.form-container input,
+.form-container select,
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.1);
+  margin-top: 5px;
+  background: #0a2613;
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px var(--accent);
+  border-color: var(--accent);
+}
+.form-container button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: var(--accent);
+  color: var(--dark-bg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.form-container button:hover {
+  box-shadow: 0 0 12px var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  background: var(--dark-bg);
+  padding: 40px 10%;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+.footer-logo {
+  font-family: 'Major Mono Display', monospace;
+  color: var(--accent);
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #hero h1 { font-size: 1.9rem; }
+}
+</style>
+</head>
+<body>
+
+<header><div class="logo">XeroGap AI</div></header>
+
+<div id="success-banner">✅ Thanks for booking your demo! We’ll contact you shortly.</div>
+
+<section id="hero">
+  <h1>AI & Automation That Drive Business Efficiency and Growth</h1>
+  <p>XeroGap AI helps Retail, Healthcare, Education, Real Estate, and Solopreneurs automate customer experience, sales, and workflows — building smarter, faster-growing businesses.</p>
+  <div class="industries">
+    <span>🛍 Retail</span><span>🏥 Healthcare</span><span>🎓 Education</span><span>🏢 Real Estate</span><span>👤 Solopreneurs</span>
+  </div>
+  <div class="hero-ctas">
+    <a href="#services" class="btn-outline">Explore Solutions</a>
+    <a href="#booking" class="btn-primary">Book Demo</a>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Our Core Solutions</h2>
+  <div class="service-grid">
+    <div class="service-card">
+      <h3>Smart Chat Support</h3>
+      <h4>AI Multi-Channel Support Copilot</h4>
+      <p><strong>Problem:</strong> Teams struggle to reply fast across WhatsApp, Instagram & Web.</p>
+      <p><strong>Solution:</strong> 24/7 instant replies powered by AI — no missed messages.</p>
+      <p><strong>Success:</strong> Faster replies → happier customers → less team stress.</p>
+      <button onclick="prefillAndScroll('Smart Chat Support')">Book Demo</button>
+    </div>
+    <div class="service-card">
+      <h3>Task Automator</h3>
+      <h4>AI-Powered Workflow Automation</h4>
+      <p><strong>Problem:</strong> Manual tasks slow your team down.</p>
+      <p><strong>Solution:</strong> Automate approvals, data entries & alerts with AI workflows.</p>
+      <p><strong>Success:</strong> Boosted efficiency and productivity.</p>
+      <button onclick="prefillAndScroll('Task Automator')">Book Demo</button>
+    </div>
+    <div class="service-card">
+      <h3>AI Sales Assistant</h3>
+      <h4>AI Sales Insights & Automation</h4>
+      <p><strong>Problem:</strong> Lost deals from missed follow-ups and poor insights.</p>
+      <p><strong>Solution:</strong> Automated lead follow-ups and smart sales insights.</p>
+      <p><strong>Success:</strong> More leads → faster deals → higher revenue.</p>
+      <button onclick="prefillAndScroll('AI Sales Assistant')">Book Demo</button>
+    </div>
+    <div class="service-card">
+      <h3>Call Quality Checker</h3>
+      <h4>AI Contact Center QA & Coaching</h4>
+      <p><strong>Problem:</strong> Hard to monitor call quality at scale.</p>
+      <p><strong>Solution:</strong> AI reviews calls and gives coaching insights.</p>
+      <p><strong>Success:</strong> Happier customers & stronger brand.</p>
+      <button onclick="prefillAndScroll('Call Quality Checker')">Book Demo</button>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>Why XeroGap AI</h2>
+  <p>At XeroGap AI, we bridge the gap between people and process — combining human insight with automation that scales.</p>
+  <p>Our mission is to help businesses operate smarter, deliver faster, and grow sustainably through intelligent AI solutions.</p>
+</section>
+
+<section id="booking">
+  <h2>Book a Free Demo</h2>
+  <div class="form-container">
+    <form id="bookingForm" action="https://formspree.io/f/mqaywpwp" method="POST">
+      <label for="serviceSelect">Service</label>
+      <select id="serviceSelect" name="service" required>
+        <option value="">Select a Service</option>
+        <option>Smart Chat Support</option>
+        <option>Task Automator</option>
+        <option>AI Sales Assistant</option>
+        <option>Call Quality Checker</option>
+      </select>
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required placeholder="Your Name" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="you@company.com" />
+
+      <label for="phone">Phone Number</label>
+<input
+  type="tel"
+  id="phone"
+  name="phone"
+  required
+  pattern="[6-9]{1}[0-9]{9}"
+  placeholder="Enter 10-digit phone number"
+/>
+
+     <label for="message">Message</label>
+<textarea
+  id="message"
+  name="message"
+  required
+  placeholder="Type your message here"
+></textarea>
+      <button type="submit">Submit Booking</button>
+   <input type="hidden" name="_subject" value="New XeroGap AI Demo Booking!">
+<input type="hidden" name="_replyto" value="sales@xerogap.com">
+
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">XeroGap AI</div>
+  <p>Automation that scales with your business.</p>
+  <p>📩 sales@xerogap.com</p>
+  <p>© 2025 XeroGap AI</p>
+</footer>
+
+<script>
+const form = document.getElementById('bookingForm');
+const banner = document.getElementById('success-banner');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const data = new FormData(form);
+  fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+    .then(() => {
+      banner.classList.add('visible');
+      form.reset();
+      setTimeout(() => banner.classList.remove('visible'), 4000);
+    });
+});
+function prefillAndScroll(service) {
+  document.getElementById('serviceSelect').value = service;
+  document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
+    
+  </body>
+  
+</html>
